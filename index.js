@@ -7,7 +7,7 @@ app.get('/about',(req,res)=>{
     res.send('His is my first deployment to heroku, very statisfiying . Thank heroku')
 })
 app.get('/',(req,res)=>{
-    res.sendFile("https://elout-project.heroku.com/srt-resume.html")
+    res.sendFile("https://elout-project.herokuapp.com/srt-resume.html")
 })
 
 app.use('/',(req,res)=>{
