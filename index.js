@@ -14,8 +14,14 @@ app.get('/',(req,res)=>{
 //     res.sendFile(path.join(__dirname +'/srt-resume.html'))
 // })
 
-app.use('/',(req,res)=>{
-    res.send('404 Error, Not found')
+
+app.get('/path', (req,res)=>{
+    res.send(__dirname)
 })
+
+app.use('/',(req,res)=>{
+    res.sendFile(path.join(__dirname +'/404.html'))
+})
+
 
 app.listen(PORT,()=>console.log('Server running http://localhost:3300'))
