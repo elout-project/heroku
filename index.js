@@ -1,8 +1,9 @@
 const express = require('express')
 
+const PORT = process.env.PORT || 3300
 const app = express()
 app.get('/',(req,res)=>{
-    res.send('Hello world, sugeng sonten !')
+    res.send('<h2>Hello world, sugeng sonten !</h2>')
 })
 
-app.listen(3300,()=>console.log('Server running http://localhost:3000'))
+app.listen(PORT,()=>console.log('Server running http://localhost:3300'))
